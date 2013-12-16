@@ -1,0 +1,16 @@
+<div class="container">
+  <button id="g"></button>
+  <div id="space_editor">
+    <% @lots.each do |lot| %>
+      <p>
+        <%= lot.name %>: <%= lot.pos_left %> : <%= lot.pos_top %>
+      </p>
+      <% if lot.pos_left.nil? and lot.pos_top.nil? %>
+        <%= content_tag :div, "#{lot.name}", class: "#{lot.name} lot", id: "#{lot.id}" %>
+      <% else %>
+        <%= content_tag :div, "#{lot.name}", class: "#{lot.name} lot",
+        style: " position: absolute; width: #{lot.width}px; height: #{lot.height}px; top: #{lot.pos_top}px; left: #{lot.pos_left}px; ", id: "#{lot.id}" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

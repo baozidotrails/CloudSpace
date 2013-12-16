@@ -1,0 +1,20 @@
+#pageslide {
+    /* These styles MUST be included. Do not change. */
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+
+    /* Specify the width of your pageslide here */
+    width: 260px;
+    padding: 20px;
+
+    /* These styles are optional, and describe how the pageslide will look */
+    background: url('https://d1vzm1nztjpyu4.cloudfront.net/assets/images/white_wall_hash-59ea80837d204b99504718e0b21264bd.png');
+    color: #000;
+    -webkit-box-shadow: inset 0 0 5px 2px #bfbfbf;
+    -moz-shadow: inset 0 0 5px 2px #bfbfbf;
+    box-shadow: inset 0 0 5px 2px #bfbfbf;
+}

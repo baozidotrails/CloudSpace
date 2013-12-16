@@ -1,0 +1,14 @@
+<%= form_for @user, html: { class: 'card' } do |f| %>
+  <div>
+    <p class="error_msg">請檢查有欄位尚未填寫！</p>
+    <p><%= f.text_field :username, placeholder: '名字' %></p>
+    <p><%= f.email_field :email, placeholder: '電子郵件' %></p>
+    <p><%= f.password_field :password, placeholder: '密碼' %></p>
+    <p><%= f.password_field :password_confirmation, placeholder: '確認密碼' %></p>
+    <p>
+      <%= f.submit '確認', class: 'btn' %>
+    </p>
+  </div>
+<% end %>
+
+已有帳號？請<%= link_to '登入', signin_path %>。

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  width: MyString
+  height: MyString
+  pos_left: MyString
+  pos_top: MyString
+  space_id: 1
+  user_id: 1
+
+two:
+  name: MyString
+  width: MyString
+  height: MyString
+  pos_left: MyString
+  pos_top: MyString
+  space_id: 1
+  user_id: 1

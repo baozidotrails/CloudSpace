@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>雲端場地租借</title>
+    <!-- webfont -->
+    <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+  </head>
+  <body>
+
+
+
+    <!-- sign up form -->
+    <div id="signup_form" style="display: none">
+      <h1 align="center">註冊免費會員</h1>
+      <%= form_for User.new, html: { class: 'main_sign_up_form' } do |f| %>
+        <div>
+          <p><%= f.text_field :name, placeholder: '名字' %></p>
+          <p><%= f.email_field :email, placeholder: '電子郵件' %></p>
+          <p><%= f.password_field :password, placeholder: '密碼', id: 'pw' %></p>
+          <p><%= f.password_field :password_confirmation, placeholder: '確認密碼' %></p>
+          <p>
+            <%= f.submit '確認', class: 'btn' %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- sign in form -->
+    <div id="signin_form" style="display: none">
+      <h1 align="center">登入網站</h1>
+      <%= form_for :session, url: sessions_path, html: { class: 'main_sign_in_form' } do |f| %>
+        <div>
+          <p><%= f.email_field :email, placeholder: '電子郵件', class: 'required' %></p>
+          <p><%= f.password_field :password, placeholder: '密碼', class: 'required' %></p>
+          <p>
+            <%= f.submit '登入', class: 'btn' %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+
+
+    <!-- navigation -->
+    <div class="nav">
+      <div class="container">
+        <a href="/" id="logo"></a>
+        <span class="links">
+          <% if signed_in? %>
+            <span class="avatar"><%= gravatar_for current_user, size: 25 %></span>
+            <%= current_user.name %>
+            <span class="item_sep">&nbsp;|&nbsp;</span>
+            <%= link_to '會員專區', current_user %>
+            <span class="item_sep">&nbsp;|&nbsp;</span>
+            <%= link_to '登出', signout_path, method: 'delete' %>
+
+          <% else %>
+
+            <%= link_to '註冊', '#signup_form', class: 'main_form' %>
+            <span class="item_sep">&nbsp;|&nbsp;</span>
+            <%= link_to '登入', '#signin_form', class: 'main_form' %>
+
+          <% end %>
+        </span>
+      </div>
+    </div>
+
+    <!-- message area -->
+    <div class="container">
+      <div class="messages">
+        <% flash.each do |name, msg| %>
+        <br>
+          <div class="alert alert-<%= name %>">
+            <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+            <%= msg %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- content area -->
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <!-- footer area -->
+    <div class="footer">
+      <div class="container">
+        <!-- Copyright © 2013 Simpleplacing. All rights reserved. -->
+      </div>
+    </div>
+  </body>
+</html>

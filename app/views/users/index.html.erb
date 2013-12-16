@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>用戶列表</h1>
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= user.id %></li>
+      <li><%= user.username %></li>
+      <li><%= user.email %></li>
+    <% end %>
+  </ul>
+</div>

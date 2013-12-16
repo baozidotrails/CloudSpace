@@ -1,0 +1,39 @@
+<h1>Listing lots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th>Pos left</th>
+      <th>Pos top</th>
+      <th>Space</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lots.each do |lot| %>
+      <tr>
+        <td><%= lot.name %></td>
+        <td><%= lot.width %></td>
+        <td><%= lot.height %></td>
+        <td><%= lot.pos_left %></td>
+        <td><%= lot.pos_top %></td>
+        <td><%= lot.space_id %></td>
+        <td><%= lot.user_id %></td>
+        <td><%= link_to 'Show', lot %></td>
+        <td><%= link_to 'Edit', edit_lot_path(lot) %></td>
+        <td><%= link_to 'Destroy', lot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lot', new_lot_path %>

@@ -1,0 +1,251 @@
+// application
+body {
+  // reset body's margin and padding
+  margin: 0;
+  padding: 0;
+  // reset font-family
+  font-family: '微軟正黑體';
+  // reset link style
+  a, a:link, a:visited{
+    text-decoration: none;
+  }
+  // font color
+  color: #000;
+  // background
+  // background: asset-url('white_wall.png',image);
+  background: #fefefe;
+  // background: linear-gradient(rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 80px) no-repeat,url(https://d1vzm1nztjpyu4.cloudfront.net/assets/images/white_wall_hash-59ea80837d204b99504718e0b21264bd.png) repeat;
+}
+
+.content, .messages {
+  text-align: center;
+}
+
+#logo {
+  // font-family: 'Candal', sans-serif;
+  // font-size: 1.5em;
+  // a, a:link, a:visited {
+    // color: #3f3f3f;
+  // }
+  display: block;
+  width: 178px;
+  height: 21px;
+  background: asset-url('logo.png',image);
+}
+
+.links {
+  float: right;
+  font-size: 20px;
+  position: relative;
+  bottom: 30px;
+  a:link, a:visited {
+    color: #7f7f7f;
+  }
+
+  a:hover {
+
+  }
+
+  .avatar {
+    position: relative;
+    top: 4px;
+  }
+}
+
+.nav {
+  padding: 20px 0 14px 0;
+  border-bottom: 2px #ffdc11 solid;
+  background: #FFF;
+  .item_sep {
+    color: #e3e3e3;
+    font-size: 10px;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+// container
+.container {
+  margin: auto;
+  width: 960px;
+}
+
+.footer {
+  background: #fef30a;
+}
+
+// home
+.board {
+  display: block;
+  margin: 20px auto 0 auto;
+  // reset h1
+  h1 {
+    margin: 0;
+    font-size: 6em;
+    letter-spacing: 10px;
+    text-shadow: 1px 4px 3px rgba(255, 255, 255, 0.6);
+  }
+
+  h4 {
+    letter-spacing: 5px;
+    font-size: 1.2em;
+  }
+  text-align: center;
+  background: #fef30a;
+  padding: 50px 0;
+  // width: 960px;
+}
+
+.fun_btn {
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 20px 0;
+  font-size: 120%;
+  border: 1px #c1c1c1 solid;
+  border-radius: 5px;
+  color: #000;
+  background: #ffffff;
+
+  &:hover {
+    background: #fafafa;
+  }
+}
+
+.sep {
+  margin: 0 55px;
+}
+
+#tabs {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  li {
+    list-style: none;
+    a {
+      display: inline-block;
+      float: left;
+      padding: 9px;
+      margin-right: 10px;
+      background: #e6e6e6;
+      border: 1px #bfbfbf solid;
+      border-bottom: none;
+      color: #000000;
+      &.open {
+        background: #ffffff;
+      }
+    }
+  }
+}
+
+#panel {
+  display: block;
+  background: #ffffff;
+  border: 1px #bfbfbf solid;
+  .hidden {
+    display: none;
+  }
+}
+
+// 暫存
+.fun_board {
+  margin-top: 100px;
+
+  .featured {
+    width: 90px;
+    height: 90px;
+    background: #fef30a;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    float: left;
+    margin: 10px;
+    margin-right: 41px;
+    position: relative;
+    left: 70px;
+    &:hover {
+      background: #dcdcdc;
+    }
+    .fc {
+      position: relative;
+      top: 24px;
+    }
+  }
+
+  .divfun {
+    position: relative;
+    top: 120px;
+    margin: 100px 0;
+    .pic {
+      display: block;
+      width: 300px;
+      height: 300px;
+      background: #dcdcdc;
+      border-radius: 5px;
+      margin: 20px 20px 20px 0;
+      float: left;
+    }
+
+    .pra {
+      display: block;
+      text-align: left;
+      width: 600px;
+      float: left;
+      line-height: 2em;
+    }
+  }
+
+}
+
+
+// form
+.main_sign_up_form, .main_sign_in_form {
+  // display: table;
+  text-align: center;
+  // padding: 15px;
+  // margin: 20px auto;
+  width: 300px;
+  // box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  // background: #ffffff;
+  // border-radius: 3px;
+
+  // reset input box size
+  input {
+    font-size: 1em;
+    width: 95%;
+    line-height: 2em;
+  }
+  input[type='submit'] {
+    margin-top: 10px;
+  }
+}
+
+.error_form {
+  display: table;
+  padding: 15px;
+  margin: 20px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+// space new
+#space_editor {
+  display: block;
+  width: 800px;
+  height: 600px;
+  background: #e6e6e6;
+  border: 1px #dbdbdb solid;
+}
+
+.lot {
+  display: block;
+  background: #f1f1f1;
+  border: #c2c2c2;
+  border: 1px #7f7f7f dotted;
+  border-radius: 3px;
+}
+
+#close {
+  background: #7f7f7f;
+  cursor: pointer;
+}

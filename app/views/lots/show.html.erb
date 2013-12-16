@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lot.name %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @lot.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @lot.height %>
+</p>
+
+<p>
+  <strong>Pos left:</strong>
+  <%= @lot.pos_left %>
+</p>
+
+<p>
+  <strong>Pos top:</strong>
+  <%= @lot.pos_top %>
+</p>
+
+<p>
+  <strong>Space:</strong>
+  <%= @lot.space_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lot.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_lot_path(@lot) %> |
+<%= link_to 'Back', lots_path %>
