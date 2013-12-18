@@ -1,24 +1,19 @@
-<br>
 <div class="container">
-  <div>
-    <div>
-      <%= gravatar_for @user, size: 140 %>
-      <span><%= @user.name %></span>
-    </div>
-    <h1>刊登記錄：</h1>
-    <div>
-      <ol>
-        <li>test</li>
-        <li>test</li>
-      </ol>
-    </div>
+  <ul id="tabs">
+    <li><a href="#profile" class="open">個人資料</a></li>
+    <li><a href="#provide_record">刊登記錄</a></li>
+    <li><a href="#rent_record">租借記錄</a></li>
+    <li><a href="#msg">訊息通知</a></li>
+    <li><a href="#query">檔期查詢</a></li>
+  </ul>
+  <div id="panel">
+    <div id="profile">
+      <h1>個人資料</h1>
 
-    <h1>租借記錄：</h1>
-    <div>
-      <ol>
-        <li>test</li>
-        <li>test</li>
-      </ol>
     </div>
+    <div id="provide_record" class="hidden">刊登記錄</div>
+    <div id="rent_record" class="hidden">租借記錄</div>
+    <div id="msg" class="hidden">訊息通知</div>
+    <div id="query" class="hidden">檔期查詢</div>
   </div>
 </div>

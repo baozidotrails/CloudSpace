@@ -1,3 +1,27 @@
-// Place all the styles related to the spaces controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// new
+#space_editor {
+  display: block;
+  height: 600px;
+  #sidebar {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  #spaces_dumps {
+    display: block;
+    width: 800px;
+    height: inherit;
+
+    float: right;
+    border: 2px dashed #bfbfbf;
+  }
+}
+
+#test {
+  display: block;
+  width: 500px;
+  height: 500px;
+  background: #bfbfbf;
+  margin: 10px;
+}

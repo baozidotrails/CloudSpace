@@ -9,7 +9,123 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require fancybox
  *= require jquery.ui.all
+ *= require fancybox
  *= require_tree .
  */
+
+
+
+ // application
+body {
+  // reset body's margin and padding
+  margin: 0;
+  padding: 0;
+  // reset font-family
+  font-family: '微軟正黑體';
+  // reset link style
+  a, a:link, a:visited{
+    text-decoration: none;
+  }
+  // font color
+  color: #000;
+  // background
+  // background: asset-url('debut-light.png',image);
+  background: #fefefe;
+  // background: linear-gradient(rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 80px) no-repeat,url(https://d1vzm1nztjpyu4.cloudfront.net/assets/images/white_wall_hash-59ea80837d204b99504718e0b21264bd.png) repeat;
+}
+
+.content {
+  margin: 25px 0;
+}
+
+#logo {
+  // font-family: 'Candal', sans-serif;
+  // font-size: 1.5em;
+  // a, a:link, a:visited {
+    // color: #3f3f3f;
+  // }
+  display: block;
+  width: 178px;
+  height: 21px;
+  background: asset-url('logo.png',image);
+}
+
+.links {
+  float: right;
+  font-size: 18px;
+  position: relative;
+  bottom: 24px;
+  color: #3f3f3f;
+  .avatar {
+    position: relative;
+    top: 2px;
+  }
+  a {
+    position: relative;
+    top: 1px;
+    color: #3f3f3f;
+    font-size: 18px;
+  }
+}
+
+.user_drop:after {
+  position: relative;
+  bottom: 3px;
+  color: #7f7f7f;
+  font-size: 12px;
+  content: "▼";
+}
+
+.nav {
+  padding: 20px 0 14px 0;
+  border-bottom: 2px #ffdc11 solid;
+  background: #FFF;
+  .item_sep {
+    color: #e3e3e3;
+    font-size: 10px;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+// container
+.container {
+  margin: auto;
+  width: 1000px;
+}
+
+.footer {
+  background: #fef30a;
+}
+
+// form
+.main_sign_up_form, .main_sign_in_form {
+  // display: table;
+  text-align: center;
+  // padding: 15px;
+  // margin: 20px auto;
+  width: 300px;
+  // box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  // background: #ffffff;
+  // border-radius: 3px;
+
+  // reset input box size
+  input {
+    font-size: 1em;
+    width: 95%;
+    line-height: 2em;
+  }
+  input[type='submit'] {
+    margin-top: 10px;
+  }
+}
+
+.error_form {
+  display: table;
+  padding: 15px;
+  margin: 20px auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  border-radius: 3px;
+}

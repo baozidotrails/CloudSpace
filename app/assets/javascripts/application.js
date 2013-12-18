@@ -16,3 +16,19 @@
 //= require jquery.ui.all
 //= require jquery.turbolinks
 //= require_tree .
+
+
+$(function() {
+  $('.main_form').fancybox();
+
+  // validation
+  $('.main_sign_up_form').validate({
+    rules: {
+      'user[name]': { required: true },
+      'user[email]': { required: true, email: true },
+      'user[password]': { required: true },
+      'user[password_confirmation]': { required: true, equalTo: "#pw" }
+    }
+  });
+  $('.main_sign_in_form').validate();
+});

@@ -20,7 +20,7 @@
         <td><%= space.img %></td>
         <td><%= space.is_rented %></td>
         <td><%= space.user_id %></td>
-        <td><%= link_to 'Show', space %></td>
+        <td><%= link_to 'Show', user_space_path() %></td>
         <td><%= link_to 'Edit', edit_space_path(space) %></td>
         <td><%= link_to 'Destroy', space, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

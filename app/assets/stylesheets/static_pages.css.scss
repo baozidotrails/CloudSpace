@@ -1,3 +1,93 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.board {
+  display: block;
+  margin: 20px auto 0 auto;
+  // reset h1
+  h1 {
+    margin: 0;
+    font-size: 6em;
+    letter-spacing: 10px;
+    text-shadow: 1px 4px 3px rgba(255, 255, 255, 0.6);
+  }
+
+  h4 {
+    letter-spacing: 5px;
+    font-size: 1.2em;
+  }
+  text-align: center;
+  background: #fef30a;
+  padding: 50px 0;
+  // width: 960px;
+}
+
+.fun_btn {
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 20px 0;
+  font-size: 120%;
+  border: 1px #c1c1c1 solid;
+  border-radius: 5px;
+  color: #000;
+  background: #ffffff;
+
+  &:hover {
+    background: #fafafa;
+  }
+}
+
+.sep {
+  margin: 0 55px;
+}
+
+
+// featured
+.fun_board {
+  text-align: center;
+  margin-top: 100px;
+  .featured {
+    width: 90px;
+    height: 90px;
+    background: #fef30a;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    float: left;
+    margin: 10px;
+    margin-right: 42px;
+    position: relative;
+    left: 70px;
+    &:hover {
+      background: #dcdcdc;
+    }
+    .fc {
+      position: relative;
+      top: 24px;
+    }
+  }
+
+  .divfun {
+    position: relative;
+    top: 120px;
+    margin: 100px 0;
+    .pic {
+      display: block;
+      width: 300px;
+      height: 300px;
+      background: #dcdcdc;
+      border-radius: 5px;
+      margin: 20px 20px 20px 0;
+      float: left;
+    }
+
+    .pra {
+      display: block;
+      text-align: left;
+      width: 600px;
+      float: left;
+      line-height: 2em;
+    }
+  }
+}

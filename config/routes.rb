@@ -12,6 +12,7 @@ Place::Application.routes.draw do
   # 首頁
   root 'static_pages#home'
 
+
   match '/members', to: 'users#index', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'

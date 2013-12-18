@@ -12,6 +12,7 @@
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 
+
   </head>
   <body>
 
@@ -52,23 +53,34 @@
     <div class="nav">
       <div class="container">
         <a href="/" id="logo"></a>
-        <span class="links">
-          <% if signed_in? %>
-            <span class="avatar"><%= gravatar_for current_user, size: 25 %></span>
+
+
+        <% if signed_in? %>
+
+          <a href="#" data-dropdown="#dropdown-1" class="links user_drop">
+            <span class="avatar"><%= gravatar_for current_user, size: 20 %></span>
             <%= current_user.name %>
-            <span class="item_sep">&nbsp;|&nbsp;</span>
-            <%= link_to '會員專區', current_user %>
-            <span class="item_sep">&nbsp;|&nbsp;</span>
-            <%= link_to '登出', signout_path, method: 'delete' %>
+          </a>
 
-          <% else %>
+          <div id="dropdown-1" class="dropdown dropdown-tip">
+            <ul class="dropdown-menu">
+              <li><%= link_to '後台管理', current_user %></li>
+              <li class="dropdown-divider"></li>
+              <li><%= link_to '登出', signout_path, method: 'delete' %></li>
+            </ul>
+          </div>
 
+
+        <% else %>
+
+          <div class="links">
             <%= link_to '註冊', '#signup_form', class: 'main_form' %>
             <span class="item_sep">&nbsp;|&nbsp;</span>
             <%= link_to '登入', '#signin_form', class: 'main_form' %>
+          </div>
 
-          <% end %>
-        </span>
+        <% end %>
+
       </div>
     </div>
 
@@ -96,5 +108,7 @@
         <!-- Copyright © 2013 Simpleplacing. All rights reserved. -->
       </div>
     </div>
+
+
   </body>
 </html>

@@ -3,7 +3,11 @@
     <div>
       <h1>雲端場地租借</h1>
       <h4>我們是全國場地租借系統，操作簡單又方便！</h4>
-      <%= link_to '我要刊登', '#', class: 'fun_btn'  %>
+      <% if signed_in? %>
+        <%= link_to '提供場地', new_user_space_path(current_user), class: 'fun_btn' %>
+      <% else %>
+        <%= link_to '提供場地', '#', class: 'fun_btn' %>
+      <% end %>
       <span class="sep"></span>
       <%= link_to '我要租借', '#', class: 'fun_btn' %>
     </div>

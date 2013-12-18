@@ -1,3 +1,38 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#tabs {
+
+  padding: 0;
+  text-align: center;
+  li {
+    list-style: none;
+    a {
+      display: inline-block;
+      float: left;
+      padding: 9px;
+      margin-right: 10px;
+      background: #e6e6e6;
+      border: 1px #bfbfbf solid;
+      border-bottom: none;
+      color: #000000;
+      &.open {
+        background: #ffffff;
+      }
+    }
+  }
+}
+
+#panel {
+  display: block;
+  background: #ffffff;
+  border: 1px #bfbfbf solid;
+  position: relative;
+  top: 44px;
+  text-align: left;
+  .hidden {
+    display: none;
+  }
+}

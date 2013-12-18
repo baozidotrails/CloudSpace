@@ -1,19 +1,8 @@
 $(function() {
-  // fancybox
-  $('.main_form').fancybox();
 
-  // validation
-  $('.main_sign_up_form').validate({
-    rules: {
-      'user[name]': { required: true },
-      'user[email]': { required: true, email: true },
-      'user[password]': { required: true },
-      'user[password_confirmation]': { required: true, equalTo: "#pw" }
-    }
-  });
-  $('.main_sign_in_form').validate();
 
-  // home tabs
+
+  // user
   $('#tabs a').on('click', function() {
     if(!$(this).hasClass('open')) {
       var oldContent = $('#tabs a.open').attr('href');
@@ -27,7 +16,7 @@ $(function() {
     }
   });
 
-  // new spaces
+  // space
   $('#g').click(function() {
     $('#space_editor').append('<div class="lot"></div>');
     $('.lot').draggable({

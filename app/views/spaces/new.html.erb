@@ -1,4 +1,26 @@
 <div class="container">
-  <button id="s"></button>
-  <div id="space_editor"></div>
+  <%= link_to '平面圖', '#sur-upload-or-make', class: 'sur_or_floor' %>
+  <%= link_to '樓層圖', '#floor-upload-or-make', class: 'sur_or_floor' %>
+
+
+  <div id="space_editor">
+    <ul id="sidebar">
+      <%= current_user.name %>的平面圖
+    </ul>
+    <div id="spaces_dumps"></div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- model -->
+<div id="sur-upload-or-make" style="display: none;">
+  <p><a href="#" id="upload-sur-pic" onclick="$.fancybox.close();">上傳平面圖</a></p>
+  <p><a href="#" id="make-sur-pic" onclick="$.fancybox.close();">製作平面圖</a></p>
 </div>

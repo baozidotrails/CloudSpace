@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    @spaces = @user.spaces
   end
 
   def new
