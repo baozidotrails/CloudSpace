@@ -9,7 +9,9 @@
   <div id="panel">
     <div id="profile">
       <h1>個人資料</h1>
-
+      <%= current_user.name %>
+      <br>
+      <%= current_user.email %>
     </div>
     <div id="provide_record" class="hidden">刊登記錄</div>
     <div id="rent_record" class="hidden">租借記錄</div>

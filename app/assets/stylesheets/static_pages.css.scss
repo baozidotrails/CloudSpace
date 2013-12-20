@@ -23,6 +23,7 @@
   // width: 960px;
 }
 
+// 我要刊登、租借按鈕
 .fun_btn {
   display: inline-block;
   padding: 15px 35px;
@@ -47,6 +48,9 @@
 .fun_board {
   text-align: center;
   margin-top: 100px;
+  a {
+    color: #000000;
+  }
   .featured {
     width: 90px;
     height: 90px;
@@ -56,38 +60,69 @@
     border-radius: 50px;
     float: left;
     margin: 10px;
-    margin-right: 42px;
+    margin-right: 50px;
     position: relative;
     left: 70px;
     &:hover {
       background: #dcdcdc;
     }
+
+    &.open {
+      background: #dcdcdc;
+    }
+
     .fc {
       position: relative;
       top: 24px;
     }
+
   }
 
-  .divfun {
-    position: relative;
-    top: 120px;
-    margin: 100px 0;
-    .pic {
-      display: block;
-      width: 300px;
-      height: 300px;
-      background: #dcdcdc;
-      border-radius: 5px;
-      margin: 20px 20px 20px 0;
-      float: left;
-    }
+  // .divfun {
+  //   position: relative;
+  //   top: 120px;
+  //   margin: 100px 0;
+  //   .pic {
+  //     display: block;
+  //     width: 300px;
+  //     height: 300px;
+  //     background: #dcdcdc;
+  //     border-radius: 5px;
+  //     margin: 20px 20px 20px 0;
+  //     float: left;
+  //   }
 
-    .pra {
-      display: block;
-      text-align: left;
-      width: 600px;
-      float: left;
-      line-height: 2em;
-    }
+  //   .pra {
+  //     display: block;
+  //     text-align: left;
+  //     width: 600px;
+  //     float: left;
+  //     line-height: 2em;
+  //   }
+  // }
+}
+
+.fun_big_board {
+  display: block;
+  margin-top: 125px;
+  width: inherit;
+  height: 100%;
+  background: #fcfcfc;
+  border-radius: 10px;
+  border: 1px dotted #bfbfbf;
+  .hidden {
+    display: none;
   }
+  text-align: center;
+  h1, p {
+    color: #000000;
+  }
+
+  color: #fef30a;
+  .fa {
+    text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.6);
+  }
+
+
+
 }

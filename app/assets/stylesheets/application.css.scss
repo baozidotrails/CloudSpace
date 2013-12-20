@@ -96,7 +96,11 @@ body {
 }
 
 .footer {
-  background: #fef30a;
+  // display: block;
+  // position: relative;
+  // bottom: 0%;
+  // height: 165px;
+  // background: #fef30a;
 }
 
 // form
@@ -128,4 +132,9 @@ body {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
   background: #ffffff;
   border-radius: 3px;
+}
+
+#useful_6 {
+  color: #bfbfbf;
+  letter-spacing: 10px;
 }

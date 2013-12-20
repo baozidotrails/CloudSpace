@@ -3,18 +3,17 @@
   <%= link_to '樓層圖', '#floor-upload-or-make', class: 'sur_or_floor' %>
 
 
-  <div id="space_editor">
+  <div id="space_editor" style="display: none;">
     <ul id="sidebar">
-      <%= current_user.name %>的平面圖
+      <a href="#" id="space_name" data-type="text" data-placement="right" data-title="自定名稱："><%= current_user.name %></a>的平面圖
     </ul>
     <div id="spaces_dumps"></div>
   </div>
 
 
 
+
 </div>
-
-
 
 
 
